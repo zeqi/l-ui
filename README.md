@@ -35,5 +35,5 @@ A UI Library for Vue.
 ### Major Contributors
 Thank you for the following items.
 * [zhuxj4](https://github.com/zeqi) 
-* [fanmm3](http://gitlab.lenovopcsd.com/u/fanmm3)
-* [shisw3](http://gitlab.lenovopcsd.com/u/shisw3)
+* [fanmm3]()
+* [shisw3]()
