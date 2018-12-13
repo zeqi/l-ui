@@ -36,7 +36,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://gitlab.lenovopcsd.com/h5/L-ui.git"
+        "url": "https://github.com/zeqi/l-ui.git"
     },
     "keywords": [
         "L-ui",
@@ -46,9 +46,9 @@
     "author": "zhuxj4 <zhuxj4@lenovo.com>",
     "license": "LENOVO",
     "bugs": {
-        "url": "http://gitlab.lenovopcsd.com/h5/L-ui/issues"
+        "url": "https://github.com/zeqi/l-ui/issues"
     },
-    "homepage": "http://gitlab.lenovopcsd.com/h5/L-ui",
+    "homepage": "https://github.com/zeqi/l-ui",
     "dependencies": {
         "config": "^1.29.4",
         "debug": "^3.1.0",
@@ -60,7 +60,7 @@
         "koa-router": "^7.4.0",
         "koa-session2": "^2.2.5",
         "koa-static": "^4.0.2",
-        "l-ui": "git+http://gitlab.lenovopcsd.com/h5/l-ui.git#dev"
+        "l-ui": "git+https://github.com/zeqi/l-ui.git#master"
     },
     "engines": {
         "node": ">= 6.9.1",

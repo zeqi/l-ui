@@ -3,7 +3,7 @@ A UI Library for Vue.
 
 ### Download
 ```sh
-    git clone http://<username>:<pwd>@gitlab.lenovopcsd.com/h5/L-ui.git
+    git clone https://github.com/zeqi/l-ui.git
 
 ```
 ### Iteration plan
