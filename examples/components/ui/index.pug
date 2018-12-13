@@ -1,0 +1,9 @@
+.optimized
+    .navigation
+        ul.navigation_menu
+            li(v-for='(item,index) in pcmviews',:key='index',@click='skipRouter(item.classID)',@mouseover="mousemove(index)",@mouseout='mouseleave()',:id='index==id?"active":""',:class='ind==index?"mark":""')
+                router-link(:to='item.path')
+                    p {{item.des}}
+    keep-alive
+        router-view(v-if='$route.meta.KeepAlive')
+    router-view(v-if='!$route.meta.KeepAlive')    

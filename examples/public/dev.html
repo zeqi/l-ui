@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!-- <html manifest="<%=htmlWebpackPlugin.options.projectPath%>./uds.appcache"> -->
+<!--<html manifest="./uds.appcache">-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>L-UI</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="pragma" contect="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./css/common.css">
+    <script type="text/javascript">
+        window._app_config = {
+            env: '<%=htmlWebpackPlugin.options.env%>'
+        }
+        var scrollFunc = function (e) {
+            e = e || window.event;
+            if (e.wheelDelta && event.ctrlKey) { //IE/Opera/Chrome 
+                event.returnValue = false;
+            } else if (e.detail) { //Firefox 
+                event.returnValue = false;
+            }
+        }
+
+        /*注册事件*/
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        } //W3C 
+        window.onmousewheel = document.onmousewheel = scrollFunc; //IE/Opera/Chrome/Safari
+
+        window.addEventListener('load', function (e) {
+            window.applicationCache.addEventListener('updateready', function (e) {
+                if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+                    // Browser downloaded a new app cache.
+                    // Swap it in and reload the page to get the new hotness.
+                    window.applicationCache.swapCache();
+                    window.location.reload();
+                } else {
+                    // Manifest didn’t changed. Nothing new to server.
+                }
+            }, false);
+        }, false);
+        // 页面开始加载前的时间，用于统计页面加载时间。放置于最前以保证准确性。
+    </script>
+</head>
+
+<body ondragstart="return false">
+    <div id="app">
+    </div>
+</body>
+
+</html>

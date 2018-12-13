@@ -1,0 +1,6 @@
+transition(name="fade")
+  div(:class="classes" v-if="fullscreenVisible")
+    div(:class="mainClasses")
+      span(:class="dotClasses")
+      div(:class="textClasses")
+        slot

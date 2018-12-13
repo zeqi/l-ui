@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>control/checkbox_check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="联想电脑管家3.0设计规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="控件/选择框/复选框_选中">
+            <g id="复选框_选中">
+                <rect id="Rectangle-10" fill="#4773FF" x="0" y="0" width="14" height="14" rx="3"></rect>
+                <polyline id="Path-42" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="3.51999998 7.43685512 6.05494168 9.98532951 11.097342 4.53240415"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

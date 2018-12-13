@@ -1,0 +1,31 @@
+{
+  "Server": {
+    "platform": "l-ui",
+    "host": "0.0.0.0",
+    "port": 7205,
+    "version": "1.0.0",
+    "SESSION_COOKIE_DOMAIN": ".l-ui.lenovo.com",
+    "SESSION_COOKIE_SIGN_KEY": "cHJvZHVjdGlvbi5sLXVpLmxlbm92by5jb20=",
+    "SESSION_TIMEOUT": 1200000,
+    "maxAge": 3600,
+    "sessionStore": {
+      "host": "10.140.10.26",
+      "port": 6279,
+      "db": 2
+    }
+  },
+  "DataProviders": {
+    "redis_ds_uds": {
+      "dsType": "redis",
+      "isDs": true,
+      "host": "10.140.10.26",
+      "port": 6279,
+      "db": 1
+    }
+  },
+  "DataCache": {
+    "cacheType": "redis",
+    "dsName": "redis_ds_uds",
+    "seconds": 60
+  }
+}

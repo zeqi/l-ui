@@ -1,0 +1,122 @@
+.ltabs {
+  box-sizing: border-box;
+  position: relative;
+  color: #657180;
+  zoom: 1
+}
+
+.ltabs-nav-container:after,
+.ltabs-nav-container:before,
+.ltabs:after,
+.ltabs:before {
+  content: "";
+  display: table;
+}
+
+.ltabs-bar {
+  outline: 0;
+  border-bottom: 1px solid #d7dde4;
+  margin-bottom: 16px;
+}
+
+.ltabs-nav-container {
+  line-height: 1.5;
+  font-size: 14px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  position: relative;
+  zoom: 1;
+}
+
+.ltabs-nav-container,
+.ltabs-nav-wrap {
+  margin-bottom: -1px;
+  overflow: hidden;
+}
+
+.ltabs-nav-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ltabs-nav:after,
+.ltabs-nav:before {
+  display: table;
+  content: " ";
+}
+
+.ltabs-ink-bar {
+  height: 2px;
+  box-sizing: border-box;
+  background-color: #39f;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  z-index: 1;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.ltabs-nav {
+  padding-left: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+.ltabs-nav .ltabs-tab {
+  display: inline-block;
+  height: 100%;
+  padding: 8px 16px;
+  margin-right: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.ltabs-nav .ltabs-tab-active {
+  color: #39f;
+}
+
+.ltabs-nav-container:after {
+  clear: both;
+  font-size: 0;
+  height: 0;
+}
+
+.ltabs .ltabs-content-animated {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  will-change: transform;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+
+.ltabs-nav .ltabs-tab-disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #ccc;
+}
+
+.ltabs-no-animation {
+  >.ltabs-content {
+    transform: none !important;
+    >.ltabs-tabpane-inactive {
+      display: none;
+    }
+  }
+}

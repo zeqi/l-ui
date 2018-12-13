@@ -1,0 +1,80 @@
+.l_progress {
+  display: flex;
+  align-items:center;
+  width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
+  font-family: "microsoft yahei";
+  .l_progress_name {
+    font-size: 14px;
+    width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .l_progress_outer {
+    flex: 1;
+    height:20px;
+    overflow: hidden;
+    margin-left: 17px;
+    display:flex;
+    align-items: center;
+    .l_progress_inner {
+      position:relative;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      background-color: rgba(84,141,255,0.1);
+      .l_progress_bg {
+        // position: relative;
+        border-radius: 100px;
+        transition: all 1s linear;
+        &.actived{
+          &:before {
+            content: '';
+            // opacity: 0;
+            position: absolute;
+            top: 0;
+            // left: 0;
+            border-radius: 100px;
+            width: 130px;
+            height: 100%;
+            background: linear-gradient(-90deg, #3276ff, rgba(255,255,255,0));
+            // right: 0;
+            // bottom: 0;
+            animation: l-progress-active 1.5s linear infinite;
+          }
+        }
+      }
+      .l_progress_follow_text {
+        padding-left: 10px;
+      }
+    }
+  }
+  .l_progress_text {
+    width: 44px;
+    padding-left: 10px;
+    font-size: 14px;
+    padding-left: 12px;
+  }
+}
+
+@keyframes l-progress-active {
+  0% {
+    width: 0;
+    opacity:0;
+    right:100%;
+  }
+  50% {
+    width: 130px;
+    opacity:1;
+    right:50%;
+  }
+  100% {
+    width: 130px;
+    opacity:0;
+    right:0%;
+  }
+}

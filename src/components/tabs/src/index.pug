@@ -1,0 +1,16 @@
+div(:class="classes")
+  div(:class="[prefixCls + '-bar']")
+    div(:class="[prefixCls + '-nav-right']" v-if="showSlot")
+      slot(name="extra")
+    div(:class="[prefixCls + '-nav-container']")
+      div(ref="navWrap", :class="[prefixCls + '-nav-wrap', scrollable ? prefixCls + '-nav-scrollable' : '']")
+        div(ref="navScroll" ,:class="[prefixCls + '-nav-scroll']")
+          div(ref="nav" ,:class="[prefixCls + '-nav']" class="nav-text"  :style="navStyle")
+            div(:class="barClasses" :style="barStyle")
+            div(:class="tabCls(item)" v-for="(item, index) in navList" @click="handleChange(index)")
+              <Icon v-if="item.icon !== ''" :type="item.icon"></Icon>
+              <Render v-if="item.labelType === 'function'" :render="item.label"></Render>
+              template( v-else) {{ item.label }}
+              <Icon v-if="showClose(item)" type="ios-close-empty" @click.native.stop="handleRemove(index)"></Icon>
+  div(:class="contentClasses" :style="contentStyle")
+    slot

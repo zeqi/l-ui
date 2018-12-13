@@ -1,0 +1,26 @@
+label(:class="wrapClasses")
+  span(:class="checkboxClasses")
+    span(:class="innerClasses")
+    input(
+        v-if="group"
+        type="checkbox"
+        :class="inputClasses"
+        :disabled="disabled"
+        :value="label"
+        v-model="model"
+        :name="name"
+        @change="change"
+        @focus="onFocus"
+        @blur="onBlur")
+    input(
+          v-else
+          type="checkbox"
+          :class="inputClasses"
+          :disabled="disabled"
+          :checked="currentValue"
+          :name="name"
+          @change="change"
+          @focus="onFocus"
+          @blur="onBlur")
+  slot
+    span(v-if="showSlot") {{ label }}

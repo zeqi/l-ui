@@ -1,0 +1,4 @@
+button(:class='classes', @click="handleClick",:disabled="disabled")
+  span(v-if="showSlot" ref="slot")
+    slot
+  

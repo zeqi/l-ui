@@ -1,0 +1,11 @@
+div(:class='wrapClass')
+  span(:class='nameClass')
+    slot {{name}}
+  div(:class='outerClass')
+    div(:class='innerClass' :style="{backgroundColor:bgColor}")
+      p(v-if='DynamicChangebg' :class='[bgClass,{ actived: active}]' :style='dynamicStyle')
+      p(v-else :class='[bgClass,{ actived: active}]' :style='pgStyle')
+      span(:class='followTextClass' v-if='isFollow')
+        slot {{getSize}} 
+  span(:class='textClass' v-if='hasText && !isFollow')
+    slot {{getSize}}

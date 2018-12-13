@@ -1,0 +1,7 @@
+div(:class="classes" @mouseleave="handleMouseleave")
+  input(type="hidden" :name="name" :value="currentValue")
+  div(v-for="item in count",:class="starCls(item)",@mousemove="handleMousemove(item, $event)",@click="handleClick(item)")
+    span(:class="[prefixCls + '-star-content']" type="half")
+  div(:class="[prefixCls + '-text']" v-if="showText" v-show="currentValue > 0")
+    slot
+      span {{ currentValue }}

@@ -1,0 +1,94 @@
+.ivu-slider {
+  position: relative;
+  z-index: 1;
+}
+
+.ivu-slider {
+  line-height: normal;
+}
+.ivu-slider-wrap {
+  width: 100%;
+  height: 4px;
+  margin: 16px 0;
+  background: #DEE1EA;
+  border-radius: 3px;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+}
+.ivu-slider-bar {
+  height: 4px;
+  background: #57a3f3;
+  border-radius: 3px;
+  position: absolute;
+}
+.ivu-slider-button-wrap {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  background-color: transparent;
+  position: absolute;
+  top: -4px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.ivu-slider-button-wrap .ivu-tooltip {
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ivu-tooltip-rel {
+  position: relative;
+}
+
+.ivu-tooltip, .ivu-tooltip-rel {
+  display: inline-block;
+}
+.ivu-slider-button {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #57a3f3;
+  border-radius: 50%;
+  background-color: #57a3f3;
+  transition: all .2s linear;
+  outline: 0;
+  margin-top: -1px;
+}
+.ivu-tooltip-popper {
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.5;
+  position: absolute;
+  z-index: 1060;
+}
+.ivu-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.ivu-tooltip-inner {
+  display: none;
+  max-width: 250px;
+  min-height: 34px;
+  padding: 8px 12px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  background-color: rgba(70,76,91,.9);
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.2);
+  white-space: nowrap;
+}
+.ivu-slider-stop {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ccc;
+ transform: translateX(-50%);
+}

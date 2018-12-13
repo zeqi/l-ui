@@ -1,0 +1,10 @@
+build/*
+config/*
+src/routes/*
+src/index.ts
+src/vue-shims.d.ts
+webpack.config.dev.js
+webpack.config.js
+webpack.config.stage.js
+webpack.config.prod.js
+examples/*

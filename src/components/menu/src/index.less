@@ -1,0 +1,79 @@
+.lmenu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    color: #495060;
+    font-size: 14px;
+    position: relative;
+    z-index: 900;
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+}
+.lmenu-light {
+    background: #fff;
+}
+.lmenu-vertical.lmenu-light:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #dddee1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.lmenu-item {
+    display: block;
+    outline: 0;
+    list-style: none;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.lmenu-vertical .lmenu-item, .lmenu-vertical .lmenu-submenu-title {
+    padding: 14px 24px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: all .2s ease-in-out;
+}
+.lmenu-vertical .lmenu-item:hover,.lmenu-vertical .lmenu-submenu-title:hover {
+    color: #2d8cf0;
+}
+.lmenu-light.lmenu-vertical .lmenu-item-active:not(.lmenu-submenu) {
+    color: #2d8cf0;
+    background: #f0faff;
+    border-right: 2px solid #2d8cf0;
+    z-index: 2;
+}
+.lmenu-light.lmenu-vertical .lmenu-item-active:not(.lmenu-submenu):after {
+    content: "";
+    display: block;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #2d8cf0;
+}
+.lmenu-vertical .lmenu-item-group-title {
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    padding-left: 28px;
+}
+.lmenu-item-group-title {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 8px;
+    font-size: 12px;
+    color: #999;
+}

@@ -1,0 +1,5 @@
+label(:class="wrapClasses")
+  span(:class="radioClasses")
+    span(:class="innerClasses")
+    input(type="radio" ,:class="inputClasses",:disabled="disabled",:checked="currentValue",:name="groupName",@change="change",@focus="onFocus",@blur="onBlur")
+  slot {{label}}

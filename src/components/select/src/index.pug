@@ -1,0 +1,9 @@
+.wrap
+  .select
+    input(:value='current' type='text', class='selected' readonly @click='togglelist')
+    .selecteshow(@click='togglelisted' v-if='showlist')
+    Licon(type='down' class='up-select', @click='Dselect',v-if='!showlist')
+    Licon(type='up' class='up-select' ,@click='Uselect' v-else)
+  .listselcect(v-if='showlist')
+    ul(class='scrollbar')
+      li(v-for='item in list' @click='changeValueHandle(item.label,item.value)') {{item.label}} 
